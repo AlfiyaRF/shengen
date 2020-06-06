@@ -1,0 +1,74 @@
+@import "bootstrap_custom";
+@import "~bootstrap/scss/bootstrap";
+
+$map-height: 70vh;
+
+#adminForm {height: 90vh;}
+
+.text-center {text-align: center;}
+
+html {font-size: 10px;}
+.mapDiv {height: $map-height;}
+
+.btn-active {
+  font-weight: 900;
+  font-size: 1.1rem;
+}
+
+#selectors {
+	position: sticky; 
+	z-index: 1040;
+  top: 1vh;}
+
+.tdCountry {width: 17vw;}
+.tdCity {width: 25vw;}
+.tdLink {width: 25vw;}
+.tdAddress {width: 33vw;}
+
+#popup2 {font-size: 0.9em; text-align: center;}
+
+.olPopup {
+  min-width: 150px;
+  font-size: 0.8em;
+  text-align: center;
+  position: absolute;
+  background-color: white;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+  border-radius: 10px;
+  border: 1px solid #cccccc;
+  bottom: 12px;
+  left: -50px;
+}
+.olPopup:after, .olPopup:before {
+  top: 100%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+.olPopup:after {
+  border-top-color: white;
+  border-width: 10px;
+  left: 48px;
+  margin-left: -10px;
+}
+.olPopup:before {
+  border-top-color: #cccccc;
+  border-width: 11px;
+  left: 48px;
+  margin-left: -11px;
+}
+.olPopupCloser {
+  text-decoration: none;
+  position: absolute;
+  top: 5px;
+  right: -1px;
+}
+.olPopupCloser:after {content: "✖";}
+
+@media all and (min-width: 981px) {
+  html {font-size: 16px;}
+  .mapDiv {height: $map-height;}
+}
